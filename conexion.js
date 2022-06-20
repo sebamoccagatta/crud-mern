@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/crudmern');
+const config = require('./config');
+
+mongoose.connect(config.DB_CONECT);
 
 const objetobd = mongoose.connection;
 
